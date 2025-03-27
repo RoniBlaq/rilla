@@ -1,0 +1,161 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	text-decoration: none;
+	list-style: none;
+}
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	padding: 1em 1em;
+	background-color: rgb(161, 65, 161);
+	transition: background-color 0.5s ease-in-out;
+	backdrop-filter: blur(5em);
+	display: flex;
+	justify-content: space-between;
+	z-index: 100;
+}
+.header.sticky {
+	background-color: white;
+}
+.blue{
+        width: 10vw;
+        height: 3vh;
+        border-style: none;
+        padding: 0.7em;
+        border-radius:5em;
+        background-color: yellow;
+           font-size: 0.3em;
+        margin-left: 3em;
+}
+.logo {
+	font-size: 1.4em;
+	color:white;
+	font-weight: 300;
+	margin-left: -1em;
+	transition: color 0.5s ease-in-out;
+}
+.logo.scrolled {
+	color: purple;
+}
+.sign-in {
+	background-color: yellow;
+	color: black;
+	border-radius: 0.9em;
+	border-style: none;
+	width: 29vw;
+    font-size:0.6em;
+    height:4vh;
+}
+.nav-menu a {
+	font-size: 0.7em;
+	color:white ;
+	font-weight: 500;
+	border-bottom: 1rem solid transparent;
+	transition: color 0.5s ease;
+}
+#menu-icon {
+	cursor: pointer;
+	font-size: 24px;
+	color: #333;
+	transition: transform 0.3s ease;
+	display: block;
+}
+#menu-icon:hover {
+	transform: scale(1.1);
+}
+.nav-menu {
+	position: absolute;
+	right:100vw;
+	gap: 1em;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	transition: 0.3s;
+	border: 2px solid #ddd;
+	padding: 2em;
+	width: 60vw;
+	height: 100vh;
+	/* background-color: black; */
+}
+.nav-menu.active {
+	right:40vw;
+	border-style: hidden;
+	background-color: black;
+}
+
+
+
+
+@media screen and (min-width:768px) {
+	#menu-icon {
+		display: none;
+	}
+	header {
+		display: flex;
+		justify-content: space-between;
+		padding: 2em ;
+	}
+	.nav-bar {
+		align-items: center;
+	}
+	.nav-link a {
+		color: black;
+	}
+	.nav-menu {
+		position: static;
+		flex-direction: row;
+		justify-content: space-between;
+		width: auto;
+		align-items: center;
+		border: none;
+		margin-top: 1em;
+		gap: 2rem;
+		margin:2em auto;
+		font-size: 1.2em;
+		height: 3vh;
+	}
+	.nav-menu a:hover {
+		text-decoration-style: dotted;
+		border-bottom: 2px solid purple;
+	}
+	.logo {
+		margin-right: 0.5em;
+	}
+	.blue{
+		font-size: 0.7em;
+        width:6vw;
+        top: 0.1em;
+	}
+	.host{
+		display: flex;
+		flex-direction: column-reverse;
+	}
+.sign-in{
+	font-size:0.8em ;
+}
+
+}
+
+
+
+@media screen and (min-width:1024px) {
+	.sign-in{
+		width: 10vw;
+	}
+	.nav-menu{
+		margin-top: -1em;
+	}
+	.header{
+		height: 15vh;
+	}
+	.blue{
+		width: 4vw;
+		padding-bottom: 1.2em;
+	}
+}
+
